@@ -26,7 +26,7 @@ import (
 	"reflect"
 	"testing"
 
-	"gopkg.in/NeilMadden/go-jose.v2/json"
+	"gopkg.in/ForgeRock/go-jose.v2/json"
 )
 
 type staticNonceSource string
@@ -169,7 +169,7 @@ func TestSignerWithBrokenRand(t *testing.T) {
 	for _, alg := range sigAlgs {
 		signingKey, verificationKey := GenerateSigningTestKey(alg)
 		for i, getReader := range readers {
-			randReader = getReader()
+			RandReader = getReader()
 			err := RoundtripJWS(alg, serializer, corrupter, signingKey, verificationKey, "test_nonce")
 			if err == nil {
 				t.Error("signer should fail if rand is broken", alg, i)
