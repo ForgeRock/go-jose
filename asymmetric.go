@@ -396,7 +396,7 @@ func (ctx ecKeyGenerator) genKey() ([]byte, rawHeader, error) {
 	if ctx.customKeyGenerator != nil {
 		priv, err = ctx.customKeyGenerator(ctx.publicKey.Curve)
 	} else {
-		priv, err = ecdsa.GenerateKey(ctx.publicKey.Curve, randReader)
+		priv, err = ecdsa.GenerateKey(ctx.publicKey.Curve, RandReader)
 	}
 	if err != nil {
 		return nil, rawHeader{}, err

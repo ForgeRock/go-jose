@@ -21,7 +21,7 @@ import (
 	"strconv"
 	"time"
 
-	"gopkg.in/square/go-jose.v2/json"
+	"gopkg.in/ForgeRock/go-jose.v2/json"
 )
 
 // Claims represents public claim values (as specified in RFC 7519).

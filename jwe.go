@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"gopkg.in/square/go-jose.v2/json"
+	"gopkg.in/ForgeRock/go-jose.v2/json"
 )
 
 // rawJSONWebEncryption represents a raw JWE JSON object. Used for parsing/serializing.
